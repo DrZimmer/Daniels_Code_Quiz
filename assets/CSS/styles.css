@@ -1,1 +1,5 @@
 /* CSS for Code Quiz*/
+.hide {
+  display: none;
+  /*make starting screen and last question/answers hide*/
+}
