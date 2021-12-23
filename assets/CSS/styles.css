@@ -16,3 +16,11 @@
 .headflex div {
   justify-content: flex-end;
 }
+
+.presentQuestions {
+  display: none;
+}
+
+.quizComplete {
+  display: none;
+}

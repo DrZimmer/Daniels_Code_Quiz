@@ -4,12 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Quiz High Scores</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/CSS/styles.css"/>
 </head>
 <body>
-  High scores
-  <!--list of all scores in local storage-->
+  <header class="headflex">
+    <div class="text-center p5 m5">
+      <h1>High Scores:</h1>
+    </div>
+  </header>
+  <main class="text-center min-vh-100 justify-content-center p-5 m-5">
+    <ol id="loadedScores" class="m-5 p-5">
+
+    </ol>
+      <button type="submit" class="btn btn-primary">Go back</button>
+      <button type="submit" class="btn btn-primary">Clear High Scores</button>
+<!--list of all scores in local storage-->
   <!--go back button-->
   <!--Clear high scores button-->
+  </main>
 </body>
 </html>

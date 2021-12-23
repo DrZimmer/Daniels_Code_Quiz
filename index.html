@@ -18,8 +18,8 @@
       Time: 
     </div>
   </header>
-  <main class="text-center min-vh-100 justify-content-center p-5 m-5" id ="start-screen">
-    <div class="hideStart">
+  <main class="text-center min-vh-100 justify-content-center p-5 m-5" id ="main-screen">
+    <div class="startScreen">
       <h1>
         Coding Quiz Challenge:
       </h1>
@@ -31,9 +31,25 @@
         <button type="button" class="btn btn-success">Start Quiz!</button>
       </div>
     </div>
-  </main>  
 
-  <!--Finished! h1, Your final score is (score). h2. enter initials: text box here, submit button-->
+    <div id="quizScreen" class="presentQuestions">
+      <!--loop through questions array here-->
+    </div>
+
+    <div id="enterInitials" class="quizComplete">
+      <h1>
+        All Done!
+      </h1>
+      <h2 class="finalScore"></h2>
+      <form>
+        <div class="form-group">
+          <label for="initials">Enter initials:</label>
+          <input type="text" class="form-control" id="initials" aria-describedby="scoreInitials" placeholder="Enter initials">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </main>
   <!-- <script src="assets/JS/questions.js"></script>
   <script src="assets/JS/logic.js"></script>
   <script src="assets/JS/scores.js"></script> -->
