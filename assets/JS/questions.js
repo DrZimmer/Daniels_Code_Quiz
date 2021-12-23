@@ -4,7 +4,7 @@ const quiz = [
   {
     question: "The condition in an if / else statement is enclosed within _____.",
     choices: ["quotes", "curly brackets", "parenthesis", "square brackets"],
-    answer: "parentheses"
+    answer: "parenthesis"
   },
   {
     question: "Arrays in JavaScript can be used to store _____.",
@@ -24,7 +24,7 @@ const quiz = [
   {
     question: "Which built-in method adds one or more elements to the end of an array and returns the new length of the array? _____.",
     choices: ["last()", "put()", "push()", "none of the above"],
-    answer: ""
+    answer: "push()"
   },
   {
     question: "Which of the following function of Array object creates a new array with the results of calling a provided function on every element in this array? _____.",
