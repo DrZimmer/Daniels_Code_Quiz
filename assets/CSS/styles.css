@@ -1,5 +1,18 @@
 /* CSS for Code Quiz*/
-.hide {
-  display: none;
-  /*make starting screen and last question/answers hide*/
+/* Universal style*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.headflex {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+  font-size: 48px;
+}
+
+.headflex div {
+  justify-content: flex-end;
 }
