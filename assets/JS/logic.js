@@ -1,19 +1,23 @@
 //Javascript for Code Quiz
 //setTimeout(()=> {
 // console.log("hello")}, 1000)    say hello after 1 second
+var time = 75;
+
 
 function startQuiz() {
   //hide start screen
-  var startScreenEl = document.getElementById("start-screen");
+  var startScreenEl = document.getElementById("startQuiz");
   startScreenEl.setAttribute("class", "hide");
 
   //make the questions section appear
+  var questionsEl = document.getElementById("quizScreen");
   questionsEl.removeAttribute("class");
 
   //start timer
-  timerId = setInterval(clockTick, 1000);
+  timerId = setInterval(countDownTime(), 1000);
 
   //show starting time
+
   timeEl.textContent = time;
 
   getQuestion();
@@ -61,7 +65,7 @@ function clickAnswer() {
 
   //hide the last question/answers
   questionsEl.setAttribute("class", "hide");
-}
+};
 
 function countDownTime() {
   //update time
@@ -72,4 +76,18 @@ function countDownTime() {
   if (time <= 0) {
     quizEnd();
   }
-}
+};
+
+function quizEnd () {
+  //hide present question
+  var questionsEl = document.getElementById("quizScreen");
+  questionsEl.setAttribute("class", "hide");
+
+  //make the input initials section appear
+  var completeEl = document.getElementById("enterInitials");
+  completeEl.removeAttribute("class");
+};
+
+//start quiz button
+var startQuizBtn = document.getElementById("begin")
+startQuizBtn.addEventListener("click", startQuiz);
