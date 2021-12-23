@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+.hide {
+  display: none;
+}
+
 .headflex {
   display: flex;
   justify-content: space-around;
@@ -23,4 +27,9 @@
 
 .quizComplete {
   display: none;
+}
+
+.boldQuestion {
+  text-decoration: solid;
+  font-size: 36px;
 }

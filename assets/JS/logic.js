@@ -2,6 +2,7 @@
 //setTimeout(()=> {
 // console.log("hello")}, 1000)    say hello after 1 second
 var time = 75;
+var timerEl = document.querySelector("timer")
 
 
 function startQuiz() {
@@ -14,25 +15,38 @@ function startQuiz() {
   questionsEl.removeAttribute("class");
 
   //start timer
-  timerId = setInterval(countDownTime(), 1000);
+  // timerId = setInterval(countDownTime(), 1000);
 
   //show starting time
 
-  timeEl.textContent = time;
+  //timerEl.textContent = time; //something is broken here?
 
   getQuestion();
 };
 
 function getQuestion() {
+  
+  let presentedQuestionIndex = 0;
   //get the current question object from the array
-  var presentedQuestion = quiz[presentedQuestionIndex];
-  //finish the rest of this function
+  let q = quiz.question[presentedQuestionIndex];
+  let question = document.querySelector("questionArr");
+  question.innerHTML = "<h1 class='boldQuestion'>" + q.question[presentedQuestionIndex] + "</h1>";
+
+  //loop through the choices array
+  for(var i = 0; i < quiz.choices.length -1; i++) {
+    presentedQuestion.innerHTML = "<btn class='answerButtons'>" + quiz.choices[i] + "</ul>";
+  }
+
+  //testing this out below for how to subtract time
+  btn.setAttribute("class", "pickedMe");
+  let answerSelected = document.querySelector("pickedMe")
+  startQuizBtn.addEventListener("click", startQuiz);
 };
 
 function clickAnswer() {
   //check if user guessed wrong
   if (this.value !== quiz[presentedQuestionIndex].answer) {
-    //penalize time
+    //subtract time
     time -= 10;
 
     if (time < 0) {
@@ -69,8 +83,8 @@ function clickAnswer() {
 
 function countDownTime() {
   //update time
-  time--;
-  timerEl.textContent = time;
+  // time--;
+  // timerEl.textContent = time;
 
   //check if user ran out of time
   if (time <= 0) {
