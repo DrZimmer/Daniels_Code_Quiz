@@ -1,18 +1,9 @@
-//have to put in some kind of object / array 
+//TODO
+//on highscores.html add newScore object/array? to local storage (see below)
 var newScore = {
   score: time,
   initials: initials
 };
-
-var initialSubmit = document.getElementById("initialSubmit").onclick = function() {
-  //on clicking submit after all done and initials entered...
-  //save time into newScore.score, save initials into newScore.initials
-  //then save into local storage
-  window.location.href = "highscores.html";
-};
-
-var startQuizBtn = document.getElementById("begin")
-startQuizBtn.addEventListener("click", startQuiz);
 
 var printHighscores = function() {
 

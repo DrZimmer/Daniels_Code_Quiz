@@ -1,6 +1,4 @@
 //Javascript for Code Quiz
-//setTimeout(()=> {
-// console.log("hello")}, 1000)    say hello after 1 second
 var time = 75;
 var timerEl = document.querySelector("#timer");
 var presentedQuestionElement = document.getElementById("quizScreen");
@@ -18,10 +16,6 @@ function startQuiz() {
 
   //start timer
   timerId = setInterval(countDownTime, 1000);
-
-  //show starting time
-
-  //timerEl.textContent = time; //something is broken here?
 
   getQuestion();
 };
@@ -42,7 +36,7 @@ function getQuestion() {
   //loop through the choices array
   for(var i = 0; i < presentedQuestion.choices.length; i++) {
     let choice = document.createElement("BUTTON");
-    choice.setAttribute("class" , "btn btn-primary");
+    choice.setAttribute("class" , "btn btn-primary m-5 p-3");
     choice.textContent = presentedQuestion.choices[i];
     choice.addEventListener("click", function () {
       //alert(choice.textContent)
@@ -50,10 +44,6 @@ function getQuestion() {
   });
     choicesElement.appendChild(choice);
   };
-  //testing this out below for how to subtract time
-  // btn.setAttribute("class", "pickedMe");
-  // let answerSelected = document.querySelector("pickedMe")
-  // startQuizBtn.addEventListener("click", startQuiz);
 };
 
 function clickAnswer(choice) {
@@ -82,19 +72,6 @@ function clickAnswer(choice) {
   } else {
     getQuestion();
   }
-
-  //anything else need to be done before showing end screen and final score here?
-
-  //show end screen
-  // var endScreenEl = document.getElementById("end-screen");
-  // endScreenEl.removeAttribute("class");
-
-  // //show final score
-  // var finalScoreEl = document.getElementById("final-score");
-  // finalScoreEl.textContent = time;
-
-  // //hide the last question/answers
-  // questionsEl.setAttribute("class", "hide");
 };
 
 function countDownTime() {
@@ -108,6 +85,9 @@ function countDownTime() {
   }
 };
 
+//TODO
+//all done entering initials needs to go to local storage with var newScore on scores.js
+//submit button on all done needs to send to highscores.html
 function quizEnd () {
   //clearing countdown
   clearInterval(timerId);
@@ -121,6 +101,12 @@ function quizEnd () {
 
   //onclick first then line below
   //window.location.href = "highscores.html";
+  var initialSubmit = document.getElementById("initialSubmit").onclick = function() {
+    //on clicking submit after all done and initials entered...
+    //save time into newScore.score, save initials into newScore.initials
+    //then save into local storage
+    window.location.href = "highscores.html";
+  };
 };
 
 //start quiz button
