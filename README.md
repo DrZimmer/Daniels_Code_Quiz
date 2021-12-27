@@ -14,8 +14,8 @@ Thanks to Qing (TA) for her help.
 - When the last question is answered (or time <= 0>) then you can enter and submit your initials. (This will submit to local storage).
 - After submitting you will be taken to the highscores.html where all previous attempts will be listed (local storage)
 
-![Password_generator_image](https://user-images.githubusercontent.com/91150259/146659163-9625cac0-6974-43ee-a7f6-43440a2bbd3a.png)
+![Code_quiz_image](https://user-images.githubusercontent.com/91150259/147491363-2e428ba2-53ea-4790-8dc2-c37d511b4339.png)
 
-#### Link to Application : https://drzimmer.github.io/Daniels_Password_Generator/
+#### Link to Application : 
 
 Code edited by: Daniel Zimmermann
