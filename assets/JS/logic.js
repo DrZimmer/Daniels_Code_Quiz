@@ -99,14 +99,20 @@ function quizEnd () {
   var completeEl = document.getElementById("enterInitials");
   completeEl.removeAttribute("class");
 
-  //onclick first then line below
-  //window.location.href = "highscores.html";
-  var initialSubmit = document.getElementById("initialSubmit").onclick = function() {
+  document.getElementById("initialSubmit").addEventListener("click", function() {
+    
     //on clicking submit after all done and initials entered...
-    //save time into newScore.score, save initials into newScore.initials
+    //save input initials into initials
+    let initials = document.getElementById("initials").value;
+    var highscores = {
+      score: time,
+      initials: initials
+    };
     //then save into local storage
+    localStorage.setItem("highscores", JSON.stringify(highscores));
+    //send user to highscores.html after click submit
     window.location.href = "highscores.html";
-  };
+  });
 };
 
 //start quiz button
