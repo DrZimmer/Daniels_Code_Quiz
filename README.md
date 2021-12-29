@@ -16,6 +16,6 @@ Thanks to Qing (TA) for her help.
 
 ![Code_quiz_image](https://user-images.githubusercontent.com/91150259/147491363-2e428ba2-53ea-4790-8dc2-c37d511b4339.png)
 
-#### Link to Application : 
+#### Link to Application : https://drzimmer.github.io/Daniels_Code_Quiz/
 
 Code edited by: Daniel Zimmermann
