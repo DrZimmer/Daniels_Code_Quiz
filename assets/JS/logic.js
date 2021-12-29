@@ -26,9 +26,8 @@ function getQuestion() {
 
   //get the current question object from the array
   let presentedQuestion = quiz[presentedQuestionIndex];
-  //let question = document.querySelector("questionArr");
-  //question.innerHTML = "<h1 class='boldQuestion'>" + q.question[presentedQuestionIndex] + "</h1>";
-  //presentedQuestionElement.textContent = presentedQuestion.question;
+  
+  //set question and choices to text
   let question = document.getElementById("question");
   question.textContent = presentedQuestion.question;
   let choicesElement = document.getElementById("choices");
@@ -36,10 +35,9 @@ function getQuestion() {
   //loop through the choices array
   for(var i = 0; i < presentedQuestion.choices.length; i++) {
     let choice = document.createElement("BUTTON");
-    choice.setAttribute("class" , "btn btn-primary m-5 p-3");
+    choice.setAttribute("class" , "btn btn-primary m-4 p-3");
     choice.textContent = presentedQuestion.choices[i];
     choice.addEventListener("click", function () {
-      //alert(choice.textContent)
       clickAnswer(choice.textContent)
   });
     choicesElement.appendChild(choice);
@@ -85,9 +83,7 @@ function countDownTime() {
   }
 };
 
-//TODO
-//all done entering initials needs to go to local storage with var newScore on scores.js
-//submit button on all done needs to send to highscores.html
+
 function quizEnd () {
   //clearing countdown
   clearInterval(timerId);
@@ -99,8 +95,8 @@ function quizEnd () {
   var completeEl = document.getElementById("enterInitials");
   completeEl.removeAttribute("class");
 
-  document.getElementById("initialSubmit").addEventListener("click", function() {
-    
+  document.getElementById("initialSubmit").addEventListener("click", function () {
+    let getHighscores = JSON.parse(localStorage.getItem("highscores")) || [];
     //on clicking submit after all done and initials entered...
     //save input initials into initials
     let initials = document.getElementById("initials").value;
@@ -108,8 +104,9 @@ function quizEnd () {
       score: time,
       initials: initials
     };
+    getHighscores.push(highscores);
     //then save into local storage
-    localStorage.setItem("highscores", JSON.stringify(highscores));
+    localStorage.setItem("highscores", JSON.stringify(getHighscores));
     //send user to highscores.html after click submit
     window.location.href = "highscores.html";
   });
