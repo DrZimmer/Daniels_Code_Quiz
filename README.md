@@ -1,11 +1,6 @@
 # Daniels_Code_Quiz
 
-Module 4 Challenge
-
 ## Challenge 4 Description
-
-No code was given for the creation of my own quiz.
-Thanks to Qing (TA) for her help.
 
 - On opening, user is presented with a description, a high scores link to highscores.html, and a start quiz button that will start the quiz/timer
 - A question and four answers are presented.
